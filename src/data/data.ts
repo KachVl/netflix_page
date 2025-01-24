@@ -18,32 +18,32 @@ export const movie: Movie = {
 export const reccomended: ReccomendedMovie[] = [
   { 
     id: 2,
-    imgUrl: '/images/2.jpg',
+    imgUrl: './images/2.jpg',
     link: 'https://www.netflix.com/',
   },
   { 
     id: 3,
-    imgUrl: '/images/3.png',
+    imgUrl: './images/3.png',
     link: 'https://www.netflix.com/',
   },
   { 
     id: 4,
-    imgUrl: '/images/4.png',
+    imgUrl: './images/4.png',
     link: 'https://www.netflix.com/',
   },
   { 
     id: 5,
-    imgUrl: '/images/5.png',
+    imgUrl: './images/5.png',
     link: 'https://www.netflix.com/',
   },
   { 
     id: 6,
-    imgUrl: '/images/6.png',
+    imgUrl: './images/6.png',
     link: 'https://www.netflix.com/',
   },
   { 
     id: 7,
-    imgUrl: '/images/7.png',
+    imgUrl: './images/7.png',
     link: 'https://www.netflix.com/',
   },
 ]
