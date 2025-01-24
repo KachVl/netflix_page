@@ -166,6 +166,7 @@
   &__buttons a {
     text-decoration: none;
     color: $main-text-color;
+    width: fit-content;
   }
 
   &__age {
