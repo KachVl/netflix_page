@@ -1,0 +1,95 @@
+@import '../../utils/mixins';
+
+.header {
+  width: 100%;
+  max-width: 100vw;
+  height: 11.2rem;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+
+  @include padding-left;
+  @include padding-right;
+
+  
+
+  @media (min-width: 640px) {
+    padding-top: 24px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 32px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-top: 40px;
+  }
+
+  &__left-container,
+  &__right-container {
+    display: flex;
+    align-items: center;
+    height: min-content;
+    align-self: flex-end;
+  }
+
+  &__right-container {
+    gap: 16px;
+
+    @media (min-width: 640px) {
+      gap: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      gap: 40px;
+    }
+  
+    @media (min-width: 1280px) {
+      gap: 48px;
+    }
+  }
+
+  &__logo {
+    width: 15.6rem;
+    height: 4.8rem;
+    margin-right: 1.6rem;
+  }
+
+  &__stroke {
+    width: 3px;
+    height: 2.8rem;
+    background-color: $decoration-color2;
+  }
+
+  &__date {
+    font-family: $titleFont;
+    font-weight: 500;
+    color: $header-date-color;
+    font-size: 2.4rem;
+    margin-left: 2.4rem;
+  }
+
+  &__profile {
+    height: 7.4rem;
+    cursor: pointer;
+
+    &__img {
+      height: 100%;
+    }
+  }
+
+  &__search-button {
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+    background-size: 100%;
+    background-image: url(./images/search_icon.svg);
+    transition: $transitionTime;
+
+    &:hover {
+      background-image: url(./images/search_icon--red.svg);
+    }
+  }
+}

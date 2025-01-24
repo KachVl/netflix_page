@@ -1,0 +1,41 @@
+@import './variables';
+
+@mixin padding-left {
+  padding-left: 8px;
+
+  @media (min-width: 440px) {
+    padding-left: 24px;
+  }
+
+  @media (min-width: 640px) {
+    padding-left: 48px;
+  };
+
+  @media (min-width: 1024px) {
+    padding-left: 64px;
+  };
+
+  @media (min-width: 1280px) {
+    padding-left: 88px;
+  };
+}
+
+@mixin padding-right {
+  padding-right: 8px;
+
+  @media (min-width: 440px) {
+    padding-right: 16px;
+  }
+
+  @media (min-width: 640px) {
+    padding-right: 32px;
+  };
+
+  @media (min-width: 1024px) {
+    padding-right: 48px;
+  };
+
+  @media (min-width: 1280px) {
+    padding-right: 64px;
+  };
+}

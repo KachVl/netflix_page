@@ -1,0 +1,26 @@
+@import './utils/mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $regularFont;
+  font-size: 6.5px;
+  background-color: #222;
+  overflow-x: hidden;
+
+  @media (min-width: 640px) {
+    font-size: 7px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 8.5px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 10px;
+  }
+}

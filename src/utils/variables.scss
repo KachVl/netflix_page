@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'KyivTitle';
+  src: url('/fonts/Kyiv_TypeTitling.woff2');
+}
+
+$titleFont: 'KyivTitle', serif;
+$regularFont: 'Inter', serif;
+
+$main-text-color: #fff;
+$secondary-text-color: #a7a6a6;
+$header-date-color: #c8c8c8;
+
+$decoration-color1: #d40d1f;
+$decoration-color2: #fff;
+$decoration-color3: rgba(255, 255, 255, 0.49);
+
+$transitionTime: 400ms;

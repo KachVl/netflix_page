@@ -1,0 +1,199 @@
+@import '../../utils/mixins';
+
+.movie {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: $secondary-text-color;
+
+  & * {
+    transition: $transitionTime;
+  }
+
+  margin-top: 11.3rem;
+
+  @include padding-left;
+
+  @media (min-width: 1024px) {
+    width: 55vw;
+    min-width: 850px;
+  }
+
+  @media (max-width: 1023px) {
+    @include padding-right;
+  }
+
+  &__title,
+  &__genre,
+  &__year,
+  &__director-title,
+  &__seasons-title,
+  &__buttons {
+    color: $main-text-color;
+  }
+
+  &__title {
+    font-size: 6.4rem;
+    font-weight: 800;
+    letter-spacing: 0.352rem;
+    margin: 2rem 0;
+  }
+
+  &__genre {
+    font-size: 3.2rem;
+    font-weight: 500;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.9rem;
+
+    & span {
+      white-space: nowrap;
+    }
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+
+  &__details-stroke {
+    width: 3px;
+    height: 2rem;
+    background-color: $decoration-color2;
+    transform: rotate(90deg) translatey(-1rem);
+
+    @media (min-width: 640px) {
+      transform: none;
+    }
+  }
+
+  &__director-title,
+  &__seasons-title,
+  &__year {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  &__description {
+    margin: 1.4rem 0 2.5rem 0;
+  }
+
+  &__rating {
+    display: flex;
+    gap: 1.4rem;
+
+    &-star {
+      width: 3.2rem;
+      height: 3.2rem;
+      background-image: url('./icons/clarity_star-line.svg');
+      background-size: 100%;
+    }
+
+    &-star--filled {
+      background-image: url('./icons/carbon_star-filled.svg');
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 5.5rem;
+
+    @media (min-width: 440px) {
+      flex-direction: row;
+      gap: 5rem;
+    }
+  }
+
+  &__button {
+    width: 27.2rem;
+    height: 64px;
+    border-radius: 10px;
+    text-align: center;
+    transition: $transitionTime;
+
+    font-size: 2.2rem;
+    font-weight: 500;
+
+    &--stream {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: $decoration-color1;
+
+      &-icon {
+        width: 32px;
+        height: 32px;
+        background-image: url('./icons/stream-icon.svg');
+        background-size: 100%;
+      }
+
+      &:hover {
+        background-color: $decoration-color2;
+        color: $decoration-color1;
+        box-shadow: 0 0 10px $decoration-color2;
+        font-weight: 700;
+
+        .movie__button--stream-icon {
+          background-image: url('./icons/stream-icon--red.svg');
+        }
+      }
+    }
+
+    &--all {
+      align-content: center;
+      background-color: inherit;
+      border: 3px solid $decoration-color2;
+
+      &:hover {
+        background-color: $decoration-color2;
+        color: $decoration-color1;
+        box-shadow: 0 0 10px $decoration-color2;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__buttons a {
+    text-decoration: none;
+    color: $main-text-color;
+  }
+
+  &__age {
+    position: fixed;
+    right: 0;
+    top: 82%;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    width: 17.4rem;
+    height: 6.6rem;
+    background-color: $decoration-color3;
+    color: $main-text-color;
+    font-size: 2.4rem;
+    font-weight: 500;
+
+    &-red-square {
+      height: 100%;
+      width: 3.3rem;
+      background-color: $decoration-color1;
+    }
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+}
+
+.hidden {
+  transform: translateX(-100%);
+}
