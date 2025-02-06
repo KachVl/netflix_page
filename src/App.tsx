@@ -9,9 +9,7 @@ import { movie, reccomended } from './data/data'
 function App() {
   return (
     <>
-
-        <Background />
-
+      <Background />
       <Header />
       <MovieCard movie={movie} />
       <Carousel movies={reccomended} />
